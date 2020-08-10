@@ -1,0 +1,62 @@
+Notes:
+
+GitHub Repositary
+https://github.com/pierian-data/complete-python-3-bootcamp
+
+String Indexing and Slicing
+	
+	Indexing : simple just give a index position in sq brackets... like 
+
+				str = "Hello World", str[1] will give you e
+
+	Slicing : to take the substring.
+
+			  syntax : string[start:stop:jump]
+
+			  String[::] will give you complete string
+		
+	example : str = "Hello World"	 
+
+			  str[3:] will give you 'lo World'.... starting from index 3 and till end
+			  str[:3] will give you 'Hel'... starting from index 3 to first
+			  str[::2] will give you 'HloWrd'... take a jump of 2
+			  str[3:10:2] will give you 'l ol'... take a jump of 2 between index 3 to 10
+			  str[::-1] will give you 'dlroW olleH'... reverse of string
+
+	Concatination can be achieved by + operator.
+	Multiple concatination can also be achieved by using *... like str = "z" and then 10 * str will give you : zzzzzzzzzz	
+
+	1. Are strings mutable? : Strings are not mutable! (meaning you can't use indexing to change individual elements of a string)
+
+String Interpolation
+	
+	.format() : to format objects in Strings.
+
+			  : print("Hello World from {}".format("Bhopal")) : the curly braces will be taking the place of format parameter.
+			    and the result will be "Hello World from Bhopal"
+
+			  : print("Hello World from {} {} {} ".format("Bhopal", "City" , "of Lakes")) 
+			  	and the result : "Hello World from Bhopal City of Lakes"
+
+			  : can also use indexing 
+			  	print("Hello World from {0} {1} {2} ".format("Bhopal", "City" , "of Lakes"))
+
+			  : can also assign variables
+			  	print("Hello World from {b} {c} {o} ".format(b = "Bhopal", c = "City" , o = "of Lakes"))
+
+	float Formatting : {value:width.precision f}		  	
+
+			  :	print("The result is {r}".format(r = result)) will give you The result is 33.333333333333336 (where the value of result is 33.333333333333336)
+
+			  : print("The result is {r:1.4f}".format(r = result)) will give you The result is 33.3333
+
+			  the width parameter is used to set the width of total value
+
+			  : print("The result is {r:10.4f}".format(r = result) will give you The result is    33.3333 here to make the width 10, it added the space at start.
+
+	f string is new feature introduce from 3.6
+				
+			  : print(f"His name is {name}")... will give you... His name is Mann (where value of variable name is mann)
+			  : print(f"{name} is {age} years old")	.. in case of multiple objects		  
+
+https://pyformat.info/			  
