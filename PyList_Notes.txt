@@ -1,0 +1,34 @@
+List:
+
+--> Ordered Sequence
+--> Can hold varity of objects [1, 2, 3, 4, 5]
+--> Can also be of mixed object type
+
+--> In python the method "type()" can be used to know the type of variable as the python supports dynamic casting
+--> To check the size of any data type use function "len()"
+
+can also use indexing and slicing as Strings
+
+example : my_List = [1,2,3,4]
+
+		  my_List[1] will give you 2
+		  my_List[2:] will give you [3,4]
+
+--> to conacatinate lists use + operator
+	
+example : list1 = [1,2,3]
+		  list2 = [4,5,6]
+
+		  list1 + list2 = [1,2,3,4,5,6]
+
+ --> list are mutable list[2] and can assign any value at any index
+ --> to add new item in list ".append()"			
+ --> to pop out/remove the last element of the list : ".pop()" and this will also return you the popped out element.
+ --> can also pop out any element on given index    : "pop(2)" will pop out element at index 2.
+ --> reverse indexing also works in case of list
+ --> to sort the list .sort() method use.. it will not return anything instead it sorted the calling list.
+ --> NoneType the type with no value
+ --> myList = list1.sort() will give you type none for myList as sort method sort the list1 and nothing gives in return
+ --> reverse() to reverse the list.
+ --> to get the element from nested list : myList = [1,1,[1,2]]
+ 										   myList[2][1] will give you 2  						
