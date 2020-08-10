@@ -33,3 +33,47 @@ The %s operator converts whatever it sees into a string, including integers and 
 	
 	I wrote 3.75 programs today.
 	I wrote 3 programs today.
+
+Padding and Precision of Floating Point Numbers
+	
+	Floating point numbers use the format %5.2f. Here, 5 would be the minimum number of characters the string should contain; these may be padded with whitespace if the entire number does not have this many digits. Next to this, .2f stands for how many numbers to show past the decimal point
+	
+	print('Floating point numbers: %5.2f' %(13.144)) : 13.14
+	
+	print('Floating point numbers: %1.0f' %(13.144)) : 13
+	
+Multiple Formatting
+
+	print('First: %s, Second: %5.2f, Third: %r' %('hi!',3.1415,'bye!'))
+	
+	First: hi!, Second:  3.14, Third: 'bye!'
+	
+By default, .format() aligns text to the left, numbers to the right. You can pass an optional <,^, or > to set a left, center or right alignment:
+
+	print('{0:<8} | {1:^8} | {2:>8}'.format('Left','Center','Right'))
+	print('{0:<8} | {1:^8} | {2:>8}'.format(11,22,33)
+
+	Left     |  Center  |    Right
+	11       |    22    |       33
+	
+f-strings
+	print(f"He said his name is {name!r}").... Pass !r to get the string representation: : He said his name is 'Fred'
+
+	num = 23.45
+	print("My 10 character, four decimal number is:{0:10.4f}".format(num))
+	print(f"My 10 character, four decimal number is:{num:{10}.{6}}")
+
+	My 10 character, four decimal number is:   23.4500
+	My 10 character, four decimal number is:     23.45
+	
+	Where with the .format() method you might see {value:10.4f}, with f-strings this can become {value:{10}.{6}}
+	with f-strings, precision refers to the total number of digits, not just those following the decimal
+	
+	num = 23.45
+	print("My 10 character, four decimal number is:{0:10.4f}".format(num))
+	print(f"My 10 character, four decimal number is:{num:10.4f}")
+	
+	My 10 character, four decimal number is:   23.4500
+	My 10 character, four decimal number is:   23.4500
+
+	
